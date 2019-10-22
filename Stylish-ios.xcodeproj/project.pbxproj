@@ -155,7 +155,6 @@
 		599C42492351783A0070531B /* Icons_36px_Catalog_Selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 599C41BC2351783A0070531B /* Icons_36px_Catalog_Selected.png */; };
 		599C424A2351783A0070531B /* Icons_24px_AwaitingReview.png in Resources */ = {isa = PBXBuildFile; fileRef = 599C41BD2351783A0070531B /* Icons_24px_AwaitingReview.png */; };
 		599C424B2351783A0070531B /* Icons_24px_Close.png in Resources */ = {isa = PBXBuildFile; fileRef = 599C41BE2351783A0070531B /* Icons_24px_Close.png */; };
-		599C4256235181280070531B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 599C4255235181280070531B /* HomeViewController.swift */; };
 		599C425A235189A40070531B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 599C4259235189A40070531B /* MainViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -331,7 +330,6 @@
 		599C41BC2351783A0070531B /* Icons_36px_Catalog_Selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icons_36px_Catalog_Selected.png; sourceTree = "<group>"; };
 		599C41BD2351783A0070531B /* Icons_24px_AwaitingReview.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icons_24px_AwaitingReview.png; sourceTree = "<group>"; };
 		599C41BE2351783A0070531B /* Icons_24px_Close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icons_24px_Close.png; sourceTree = "<group>"; };
-		599C4255235181280070531B /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		599C4259235189A40070531B /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -582,7 +580,6 @@
 			isa = PBXGroup;
 			children = (
 				599C4259235189A40070531B /* MainViewController.swift */,
-				599C4255235181280070531B /* HomeViewController.swift */,
 			);
 			path = viewController;
 			sourceTree = "<group>";
@@ -862,7 +859,6 @@
 				595CA148235046DB00A6070C /* AppDelegate.swift in Sources */,
 				595CA14A235046DB00A6070C /* SceneDelegate.swift in Sources */,
 				599C425A235189A40070531B /* MainViewController.swift in Sources */,
-				599C4256235181280070531B /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
