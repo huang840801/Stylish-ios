@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6JU-ER-4xU">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gKB-m4-xlC">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
@@ -35,7 +35,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3778.2608695652175" y="112.5"/>
+            <point key="canvasLocation" x="4688.4057971014499" y="112.5"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="iQF-em-kbw">
@@ -62,13 +62,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5cy-oj-9Tz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4594.202898550725" y="112.5"/>
+            <point key="canvasLocation" x="5504.347826086957" y="112.5"/>
         </scene>
-        <!--Page1-->
+        <!--Navigation Controller-->
         <scene sceneID="iZL-3v-Dmp">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7HX-XP-Kja" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Page1" image="Icons_36px_Catalog_Selected.png" id="rWx-D5-c7b"/>
+                    <tabBarItem key="tabBarItem" title="" image="Icons_36px_Home_Normal.png" selectedImage="Icons_36px_Home_Selected.png" id="rWx-D5-c7b"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="8pS-ry-HWB">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -81,7 +81,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="afg-Jg-mcF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2868.115942028986" y="112.5"/>
+            <point key="canvasLocation" x="3778.2608695652175" y="112.5"/>
         </scene>
         <!--Main View Controller-->
         <scene sceneID="HJR-HB-YX3">
@@ -111,7 +111,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Azp-Du-ao3" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3778.2608695652175" y="812.94642857142856"/>
+            <point key="canvasLocation" x="4688.4057971014499" y="812.94642857142856"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="ccL-CO-FFl">
@@ -138,13 +138,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2wF-sR-Gnd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4594.202898550725" y="812.94642857142856"/>
+            <point key="canvasLocation" x="5504.347826086957" y="812.94642857142856"/>
         </scene>
-        <!--Page2-->
+        <!--Navigation Controller-->
         <scene sceneID="Xjs-XY-apM">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="We1-jd-zeK" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Page2" image="Icons_36px_Cart_Selected.png" id="pvf-0B-FeC"/>
+                    <tabBarItem key="tabBarItem" title="" image="Icons_36px_Catalog_Normal.png" selectedImage="Icons_36px_Catalog_Selected.png" id="pvf-0B-FeC"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="zdT-Fl-U2f">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -157,7 +157,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J34-Zx-YIU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2868.115942028986" y="812.94642857142856"/>
+            <point key="canvasLocation" x="3778.2608695652175" y="812.94642857142856"/>
         </scene>
         <!--Main View Controller-->
         <scene sceneID="qDu-z9-WE9">
@@ -187,7 +187,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IlH-uY-UMS" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3826.0869565217395" y="1534.8214285714284"/>
+            <point key="canvasLocation" x="4686.9565217391309" y="1534.8214285714284"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="VpA-6a-Yin">
@@ -214,13 +214,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SJ5-ng-DfH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4642.0289855072469" y="1534.8214285714284"/>
+            <point key="canvasLocation" x="5502.898550724638" y="1534.8214285714284"/>
         </scene>
-        <!--Page3-->
+        <!--Navigation Controller-->
         <scene sceneID="gE7-hD-icW">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="mPt-8h-CfK" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Page3" image="Icons_36px_Home_Selected.png" id="Sel-bk-QaK"/>
+                    <tabBarItem key="tabBarItem" title="" image="Icons_36px_Cart_Normal.png" selectedImage="Icons_36px_Cart_Selected.png" id="Sel-bk-QaK"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="7sW-hx-pOB">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -233,31 +233,115 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eqo-T7-1MP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2868" y="1535"/>
+            <point key="canvasLocation" x="3776.811594202899" y="1534.8214285714284"/>
+        </scene>
+        <!--Main View Controller-->
+        <scene sceneID="IPB-Pr-pc1">
+            <objects>
+                <viewController id="DZR-Ov-TMy" customClass="MainViewController" customModule="Stylish_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YRt-Wu-Re8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rb1-TM-phd">
+                                <rect key="frame" x="120.5" y="412" width="173" height="72"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <state key="normal" title="Page4 a"/>
+                                <connections>
+                                    <segue destination="ODY-Vf-chW" kind="show" id="iBh-Dg-NsE"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Rb1-TM-phd" firstAttribute="centerY" secondItem="YRt-Wu-Re8" secondAttribute="centerY" id="H6m-GO-m34"/>
+                            <constraint firstItem="Rb1-TM-phd" firstAttribute="centerX" secondItem="YRt-Wu-Re8" secondAttribute="centerX" id="dsb-5O-Pnd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="nZj-hc-K8I"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="bAb-cN-vbU"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IrD-P1-TfZ" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4686.9565217391309" y="2227.9017857142858"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="RWF-yo-y1E">
+            <objects>
+                <viewController id="ODY-Vf-chW" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fL1-7s-i2X">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bgi-ZC-D3l">
+                                <rect key="frame" x="132" y="412" width="150" height="72"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <state key="normal" title="Pag4 b"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Bgi-ZC-D3l" firstAttribute="centerX" secondItem="fL1-7s-i2X" secondAttribute="centerX" id="0eE-99-nHE"/>
+                            <constraint firstItem="Bgi-ZC-D3l" firstAttribute="centerY" secondItem="fL1-7s-i2X" secondAttribute="centerY" id="NdU-MH-0KW"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="nE5-3D-jDX"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="7MY-Dh-Io5"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="znU-K4-VG8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5502.898550724638" y="2227.9017857142858"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="pcu-ZH-PlC">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Pju-xn-blE" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="Icons_36px_Profile_Normal.png" selectedImage="Icons_36px_Profile_Selected.png" id="Lrt-LO-eJM"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="sks-CC-yox">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="DZR-Ov-TMy" kind="relationship" relationship="rootViewController" id="4Q7-re-Dly"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RXu-BF-MDD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3776.811594202899" y="2227.9017857142858"/>
         </scene>
         <!--Tab Bar Controller-->
-        <scene sceneID="VAB-Dp-MRU">
+        <scene sceneID="ZF0-UZ-eMn">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="6JU-ER-4xU" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="gKB-m4-xlC" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="6T8-Nu-2m6">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="JJo-Uc-CMr">
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="selectedImageTintColor" cocoaTouchSystemColor="darkTextColor"/>
                     </tabBar>
                     <connections>
-                        <segue destination="7HX-XP-Kja" kind="relationship" relationship="viewControllers" id="231-kH-xbm"/>
-                        <segue destination="We1-jd-zeK" kind="relationship" relationship="viewControllers" id="iQq-pX-h39"/>
-                        <segue destination="mPt-8h-CfK" kind="relationship" relationship="viewControllers" id="S9f-Pt-wPv"/>
+                        <segue destination="7HX-XP-Kja" kind="relationship" relationship="viewControllers" id="UgR-dr-moN"/>
+                        <segue destination="We1-jd-zeK" kind="relationship" relationship="viewControllers" id="Vt5-kA-Fu2"/>
+                        <segue destination="mPt-8h-CfK" kind="relationship" relationship="viewControllers" id="BfI-3I-zGd"/>
+                        <segue destination="Pju-xn-blE" kind="relationship" relationship="viewControllers" id="9Wn-lU-EMG"/>
                     </connections>
                 </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="v8j-lf-5wE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g9h-vI-Zqn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1559" y="1174"/>
+            <point key="canvasLocation" x="1683" y="1702"/>
         </scene>
     </scenes>
     <resources>
+        <image name="Icons_36px_Cart_Normal.png" width="36" height="36"/>
         <image name="Icons_36px_Cart_Selected.png" width="36" height="36"/>
+        <image name="Icons_36px_Catalog_Normal.png" width="36" height="36"/>
         <image name="Icons_36px_Catalog_Selected.png" width="36" height="36"/>
+        <image name="Icons_36px_Home_Normal.png" width="36" height="36"/>
         <image name="Icons_36px_Home_Selected.png" width="36" height="36"/>
+        <image name="Icons_36px_Profile_Normal.png" width="36" height="36"/>
+        <image name="Icons_36px_Profile_Selected.png" width="36" height="36"/>
     </resources>
 </document>
