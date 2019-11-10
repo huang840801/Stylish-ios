@@ -394,12 +394,13 @@
 				5992CFF7237301B500BF14CA /* view */,
 				597FB2C3236E666900A87E32 /* api */,
 				597FB2C0236E64E100A87E32 /* object */,
+				59B4DEC02377029E00055E5E /* Resources */,
 				599C424E2351805D0070531B /* controller */,
 				599C424D235180310070531B /* storyboard */,
-				599C41302351783A0070531B /* Resources */,
 				595CA147235046DB00A6070C /* AppDelegate.swift */,
 				595CA149235046DB00A6070C /* SceneDelegate.swift */,
 				595CA150235046DD00A6070C /* Assets.xcassets */,
+				599C41302351783A0070531B /* Resources */,
 				595CA152235046DD00A6070C /* LaunchScreen.storyboard */,
 				595CA155235046DD00A6070C /* Info.plist */,
 			);
@@ -621,6 +622,13 @@
 				597FB2BA23654AC300A87E32 /* HomeViewController.swift */,
 			);
 			path = controller;
+			sourceTree = "<group>";
+		};
+		59B4DEC02377029E00055E5E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

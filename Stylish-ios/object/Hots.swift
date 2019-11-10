@@ -8,41 +8,94 @@
 
 import Foundation
 
-struct Hots: Codable {
+struct PromotedProducts: Decodable {
 
-    var hotList = [Hot]()
+    let title: String
+
+    let products: [Product]
 }
 
-struct Hot: Codable  {
-    var title :String
-    var productList = [Product]()
+struct Product: Codable {
+
+    let id: Int
+
+    let title: String
+
+    let description: String
+
+    let price: Int
+
+    let texture: String
+
+    let wash: String
+
+    let place: String
+
+    let note: String
+
+    let story: String
+
+    let colors: [Color]
+
+    let sizes: [String]
+
+    let variants: [Variant]
+
+    let mainImage: String
+
+    let images: [String]
+
+    var size: String {
+
+        return (sizes.first ?? "") + " - " + (sizes.last ?? "")
+    }
+
+    var stock: Int {
+
+        return variants.reduce(0, { (previousData, upcomingData) -> Int in
+
+            return previousData + upcomingData.stock
+        })
+    }
+
+    enum CodingKeys: String, CodingKey {
+
+        case id
+        case title
+        case description
+        case price
+        case texture
+        case wash
+        case place
+        case note
+        case story
+        case colors
+        case sizes
+        case variants
+        case mainImage = "main_image"
+        case images
+    }
 }
 
-struct Product: Codable  {
-    var id: Int
-    var category: String
-    var title: String
-    var description: String
-    var price: String
-    var texture: String
-    var wash: String
-    var place: String
-    var note: String
-    var story: String
-    var colorList = [Color]()
-    var sizeList = [String]()
-    var variants = [Variant]()
-    var mainImage : String
-    var imageList = [String]()
+struct Color: Codable {
+
+    let name: String
+
+    let code: String
 }
 
 struct Variant: Codable {
-    var colorCode: String
-    var size: String
-    var stock: String
-}
 
-struct Color: Codable  {
-    var code: String
-    var name: String
+    let colorCode: String
+
+    let size: String
+
+    let stock: Int
+
+    enum CodingKeys: String, CodingKey {
+
+        case colorCode = "color_code"
+        case size
+        case stock
+    }
 }

@@ -4,10 +4,35 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Stylish-ios.xcscheme_^#shared#^_</key>
+		<key>Stylish-ios 1.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+		<key>Stylish-ios.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+			<key>orderHint</key>
 			<integer>0</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>595CA143235046DB00A6070C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>595CA159235046DD00A6070C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>595CA164235046DD00A6070C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>
