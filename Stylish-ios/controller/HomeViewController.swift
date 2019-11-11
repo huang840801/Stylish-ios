@@ -9,10 +9,10 @@
 import UIKit
 
 class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-        
-    var hotList = [PromotedProducts]()
-    
+
     @IBOutlet weak var tableView: UITableView!
+
+    var hotList = [PromotedProducts]()
     
     override func viewDidLoad() {
         
@@ -27,21 +27,20 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         tableView.rowHeight = 200
         
-        getCoffeeData()
+        getHots()
     }
     
     // 必須實作的方法：每一組 section 有幾個 cell
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return shopName.count
+        return hotList.count
     }
     
     // 必須實作的方法：每個 cell 要顯示的內容
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        //        // 取得 tableView 目前使用的 cell
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "hotsCell", for: indexPath) as! HotsCellTableViewCell
-        cell.title.text = shopName[indexPath.row]
+        cell.title.text = hotList[indexPath.row].title
         cell.title.numberOfLines = 0
         
         return cell
@@ -60,45 +59,36 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
 //        print("選擇的是第 \(indexPath.section) 個 section 的第 \(indexPath.row) 個 cell，\(name)")
     }
     
-    // 每個 section 的標題
-    func tableView(_ tableView: UITableView,
-                   titleForHeaderInSection section: Int) -> String? {
-        let title = section == 0 ? "籃球" : "棒球"
-        return title
-    }
-    
-    var shopName:[String] = []
-    var shopCity:[String] = []
-    
-    func getCoffeeData() {
-        let address = "https://cafenomad.tw/api/v1.2/cafes/taipei"
-        if let url = URL(string: address) {
-            // GET
-            URLSession.shared.dataTask(with: url) { (data, response, error) in
-                if let error = error {
-                    print("Error: \(error.localizedDescription)")
-                } else if let response = response as? HTTPURLResponse,let data = data {
-                    print("Status code: \(response.statusCode)")
-                    let decoder = JSONDecoder()
+    func getHots() {
+        
+        let hotsApi = StylishURL.MARKET_HOTS
+           if let url = URL(string: hotsApi) {
+               // GET
+               URLSession.shared.dataTask(with: url) { (data, response, error) in
+                   if let error = error {
                     
-                    if let coffeeData = try? decoder.decode([CoffeeData].self, from: data) {
-                        DispatchQueue.main.async{
-                            for coffee in coffeeData {
-                                self.shopName.append(coffee.name)
-                                self.shopCity.append(coffee.city)
+                       print("Error: \(error.localizedDescription)")
+                    
+                   } else if let response = response as? HTTPURLResponse,let data = data {
+                    
+                       print("Status code: \(response.statusCode)")
+                       let decoder = JSONDecoder()
+                       
+                       if let hotsData = try? decoder.decode(HotsData.self, from: data) {
+                           DispatchQueue.main.async{
+                          
+                            for hot in (hotsData.data){
+                                
+                                self.hotList.append(hot)
                             }
-                            self.tableView.reloadData()
-                        }
-                    }
-                }
-            }.resume()
-        } else {
-            print("Invalid URL.")
-        }
+                            
+                               self.tableView.reloadData()
+                           }
+                       }
+                   }
+               }.resume()
+           } else {
+               print("Invalid URL.")
+           }
     }
-}
-
-struct CoffeeData: Decodable {
-    var name: String
-    var city: String
 }

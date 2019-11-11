@@ -8,6 +8,10 @@
 
 import Foundation
 
+struct HotsData : Decodable{
+    let data: [PromotedProducts]
+}
+
 struct PromotedProducts: Decodable {
 
     let title: String
@@ -15,7 +19,7 @@ struct PromotedProducts: Decodable {
     let products: [Product]
 }
 
-struct Product: Codable {
+struct Product: Decodable {
 
     let id: Int
 
@@ -77,14 +81,14 @@ struct Product: Codable {
     }
 }
 
-struct Color: Codable {
+struct Color: Decodable {
 
     let name: String
 
     let code: String
 }
 
-struct Variant: Codable {
+struct Variant: Decodable {
 
     let colorCode: String
 
