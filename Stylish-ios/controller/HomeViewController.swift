@@ -25,7 +25,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         tableView.dataSource = self
         tableView.delegate = self
         
-        tableView.rowHeight = 200
+        tableView.rowHeight = 300
         
         getHots()
     }
@@ -42,6 +42,26 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         let cell = tableView.dequeueReusableCell(withIdentifier: "hotsCell", for: indexPath) as! HotsCellTableViewCell
         cell.title.text = hotList[indexPath.row].title
         cell.title.numberOfLines = 0
+        
+        let imageURL = URL(string: hotList[indexPath.row].products[0].mainImage)
+          var image: UIImage?
+          if let url = imageURL {
+              //All network operations has to run on different thread(not on main thread).
+              DispatchQueue.global(qos: .userInitiated).async {
+                  let imageData = NSData(contentsOf: url)
+                  //All UI operations has to run on main thread.
+                  DispatchQueue.main.async {
+                      if imageData != nil {
+                        
+                        image = UIImage(data: imageData! as Data)
+                        cell.topImageView?.image = image
+
+                      } else {
+                          image = nil
+                      }
+                  }
+              }
+          }
         
         return cell
     }

@@ -210,11 +210,22 @@
                                     <segue destination="5LL-iK-jnr" kind="show" id="vVJ-sB-vVP"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8x7-fI-YyF">
+                                <rect key="frame" x="0.0" y="88" width="414" height="128"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="OiK-ne-lye"/>
+                                    <constraint firstAttribute="width" constant="414" id="Rup-wm-AsD"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="GTt-Fu-UmC" firstAttribute="centerX" secondItem="pWN-IP-zhv" secondAttribute="centerX" id="Ehm-ic-O2n"/>
                             <constraint firstItem="GTt-Fu-UmC" firstAttribute="centerY" secondItem="pWN-IP-zhv" secondAttribute="centerY" id="Q7Q-HZ-MxU"/>
+                            <constraint firstItem="8x7-fI-YyF" firstAttribute="top" secondItem="thx-fP-Gr3" secondAttribute="top" id="Ttd-T3-Her"/>
+                            <constraint firstItem="8x7-fI-YyF" firstAttribute="trailing" secondItem="thx-fP-Gr3" secondAttribute="trailing" id="Wee-yI-Azm"/>
+                            <constraint firstItem="8x7-fI-YyF" firstAttribute="leading" secondItem="thx-fP-Gr3" secondAttribute="leading" id="sK6-l3-aJp"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="thx-fP-Gr3"/>
                     </view>

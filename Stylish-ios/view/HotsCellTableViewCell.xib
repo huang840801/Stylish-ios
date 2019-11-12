@@ -16,36 +16,43 @@
                 <rect key="frame" x="0.0" y="0.0" width="574" height="420"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jcJ-Od-ngP">
-                        <rect key="frame" x="16" y="16" width="574" height="53"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="6" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="jcJ-Od-ngP">
+                        <rect key="frame" x="20" y="144" width="534" height="30"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="574" id="gTL-5p-bv6"/>
-                            <constraint firstAttribute="height" constant="53" id="vvA-Ef-OIf"/>
+                            <constraint firstAttribute="width" constant="534" id="DTN-Dt-ijB"/>
+                            <constraint firstAttribute="height" constant="30" id="l00-Fl-Oa1"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image_Placeholder.png" translatesAutoresizingMaskIntoConstraints="NO" id="kTE-31-qGV">
+                        <rect key="frame" x="0.0" y="0.0" width="574" height="128"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="574" id="3yV-lx-ojZ"/>
+                            <constraint firstAttribute="height" constant="128" id="TWn-lo-LIp"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="jcJ-Od-ngP" secondAttribute="trailing" constant="16" id="1NI-JT-Mlh"/>
-                    <constraint firstItem="jcJ-Od-ngP" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="C7D-70-wrm"/>
-                    <constraint firstItem="jcJ-Od-ngP" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="GnO-vY-T0k"/>
-                    <constraint firstItem="jcJ-Od-ngP" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="L9C-Kc-KL3"/>
-                    <constraint firstItem="jcJ-Od-ngP" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="TYO-7G-UUf"/>
-                    <constraint firstAttribute="trailing" secondItem="jcJ-Od-ngP" secondAttribute="trailing" constant="16" id="YQ1-qZ-yKF"/>
-                    <constraint firstItem="jcJ-Od-ngP" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="c4j-cb-drv"/>
-                    <constraint firstAttribute="trailing" secondItem="jcJ-Od-ngP" secondAttribute="trailing" constant="16" id="jZi-xz-3u0"/>
-                    <constraint firstItem="jcJ-Od-ngP" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="mfM-oe-dta"/>
-                    <constraint firstAttribute="trailing" secondItem="jcJ-Od-ngP" secondAttribute="trailing" constant="16" id="w7z-r5-pF0"/>
+                    <constraint firstAttribute="trailing" secondItem="kTE-31-qGV" secondAttribute="trailing" id="5Dc-8x-ldm"/>
+                    <constraint firstItem="kTE-31-qGV" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="GPi-hG-b1v"/>
+                    <constraint firstItem="jcJ-Od-ngP" firstAttribute="top" secondItem="kTE-31-qGV" secondAttribute="bottom" constant="16" id="H5m-0o-2Fh"/>
+                    <constraint firstItem="kTE-31-qGV" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="ScR-LY-eGm"/>
+                    <constraint firstItem="jcJ-Od-ngP" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="ge6-Rr-PNC"/>
+                    <constraint firstItem="jcJ-Od-ngP" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="w9n-tX-pAE"/>
                 </constraints>
                 <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="aYU-oz-Afi"/>
             <connections>
                 <outlet property="title" destination="jcJ-Od-ngP" id="gU8-tY-rau"/>
+                <outlet property="topImageView" destination="kTE-31-qGV" id="JSW-mD-P2X"/>
             </connections>
             <point key="canvasLocation" x="213.04347826086959" y="185.86956521739131"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="Image_Placeholder.png" width="375" height="375"/>
+    </resources>
 </document>

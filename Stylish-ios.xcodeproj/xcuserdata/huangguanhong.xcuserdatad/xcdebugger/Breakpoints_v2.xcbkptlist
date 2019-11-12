@@ -3,4 +3,114 @@
    uuid = "DEA0B0AB-3C11-4F2C-82C1-D26DDDCA2360"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "05230B36-60B4-48CE-8662-646CF5ED3F4D"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Stylish-ios/view/HotsCellTableViewCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "14"
+            endingLineNumber = "14"
+            landmarkName = "HotsCellTableViewCell"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "05230B36-60B4-48CE-8662-646CF5ED3F4D - 2afd79126d48e70c"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Stylish_ios.HotsCellTableViewCell.topImageView.getter : Swift.Optional&lt;__C.UIImageView&gt;"
+                  moduleName = "Stylish-ios"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/huangguanhong/IOS%20Projects/Stylish-ios/Stylish-ios/view/HotsCellTableViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "88">
+               </Location>
+               <Location
+                  uuid = "05230B36-60B4-48CE-8662-646CF5ED3F4D - b2dd3140e08d0b70"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Stylish_ios.HotsCellTableViewCell.topImageView.setter : Swift.Optional&lt;__C.UIImageView&gt;"
+                  moduleName = "Stylish-ios"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/huangguanhong/IOS%20Projects/Stylish-ios/Stylish-ios/view/HotsCellTableViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "104">
+               </Location>
+               <Location
+                  uuid = "05230B36-60B4-48CE-8662-646CF5ED3F4D - 5ab1c26276134c01"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Stylish_ios.HotsCellTableViewCell.topImageView.modify : Swift.Optional&lt;__C.UIImageView&gt;"
+                  moduleName = "Stylish-ios"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/huangguanhong/IOS%20Projects/Stylish-ios/Stylish-ios/view/HotsCellTableViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "67">
+               </Location>
+               <Location
+                  uuid = "05230B36-60B4-48CE-8662-646CF5ED3F4D - f473792556fbaa2d"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Stylish_ios.HotsCellTableViewCell.topImageView.modify : Swift.Optional&lt;__C.UIImageView&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "Stylish-ios"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/huangguanhong/IOS%20Projects/Stylish-ios/Stylish-ios/view/HotsCellTableViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "76">
+               </Location>
+               <Location
+                  uuid = "05230B36-60B4-48CE-8662-646CF5ED3F4D - 7f342d9aac1fa411"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Stylish_ios.HotsCellTableViewCell.init(style: __C.UITableViewCellStyle, reuseIdentifier: Swift.Optional&lt;Swift.String&gt;) -&gt; Stylish_ios.HotsCellTableViewCell"
+                  moduleName = "Stylish-ios"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/huangguanhong/IOS%20Projects/Stylish-ios/Stylish-ios/view/HotsCellTableViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "258">
+               </Location>
+               <Location
+                  uuid = "05230B36-60B4-48CE-8662-646CF5ED3F4D - 49dfe5145ce72906"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Stylish_ios.HotsCellTableViewCell.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;Stylish_ios.HotsCellTableViewCell&gt;"
+                  moduleName = "Stylish-ios"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/huangguanhong/IOS%20Projects/Stylish-ios/Stylish-ios/view/HotsCellTableViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "184">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>
