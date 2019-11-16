@@ -33,12 +33,27 @@
                             <constraint firstAttribute="height" constant="128" id="TWn-lo-LIp"/>
                         </constraints>
                     </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="6" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="uKL-Uc-XXd">
+                        <rect key="frame" x="20" y="190" width="534" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="534" id="3Iu-ea-pXS"/>
+                            <constraint firstAttribute="height" constant="30" id="Ahw-WA-GcN"/>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="534" id="V8I-QQ-G71"/>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="YoN-7Y-3RM"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="kTE-31-qGV" secondAttribute="trailing" id="5Dc-8x-ldm"/>
+                    <constraint firstItem="uKL-Uc-XXd" firstAttribute="top" secondItem="jcJ-Od-ngP" secondAttribute="bottom" constant="16" id="CfA-pm-fF3"/>
                     <constraint firstItem="kTE-31-qGV" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="GPi-hG-b1v"/>
                     <constraint firstItem="jcJ-Od-ngP" firstAttribute="top" secondItem="kTE-31-qGV" secondAttribute="bottom" constant="16" id="H5m-0o-2Fh"/>
+                    <constraint firstItem="uKL-Uc-XXd" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="Rim-yU-z3t"/>
                     <constraint firstItem="kTE-31-qGV" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="ScR-LY-eGm"/>
+                    <constraint firstItem="uKL-Uc-XXd" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="bIn-Th-s0X"/>
                     <constraint firstItem="jcJ-Od-ngP" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="ge6-Rr-PNC"/>
                     <constraint firstItem="jcJ-Od-ngP" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="w9n-tX-pAE"/>
                 </constraints>
@@ -46,6 +61,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="aYU-oz-Afi"/>
             <connections>
+                <outlet property="subTitle" destination="uKL-Uc-XXd" id="D26-Ka-h9q"/>
                 <outlet property="title" destination="jcJ-Od-ngP" id="gU8-tY-rau"/>
                 <outlet property="topImageView" destination="kTE-31-qGV" id="JSW-mD-P2X"/>
             </connections>

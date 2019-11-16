@@ -12,6 +12,8 @@ class HotsCellTableViewCell: UITableViewCell {
 
     @IBOutlet weak var title: UILabel!
     
+    @IBOutlet weak var subTitle: UILabel!
+    
     @IBOutlet weak var topImageView: UIImageView!
     
     override func awakeFromNib() {

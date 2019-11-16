@@ -33,17 +33,19 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     // 必須實作的方法：每一組 section 有幾個 cell
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return hotList.count
+        return hotList[section].products.count
     }
     
     // 必須實作的方法：每個 cell 要顯示的內容
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "hotsCell", for: indexPath) as! HotsCellTableViewCell
-        cell.title.text = hotList[indexPath.row].title
+        cell.title.text = hotList[indexPath.section].products[indexPath.row].title
+        cell.subTitle.text = hotList[indexPath.section].products[indexPath.row].description
+
         cell.title.numberOfLines = 0
         
-        let imageURL = URL(string: hotList[indexPath.row].products[0].mainImage)
+        let imageURL = URL(string: hotList[indexPath.section].products[indexPath.row].mainImage)
           var image: UIImage?
           if let url = imageURL {
               //All network operations has to run on different thread(not on main thread).
@@ -68,7 +70,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     // 有幾組 section
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return hotList.count
     }
     
     // section 點擊事件
