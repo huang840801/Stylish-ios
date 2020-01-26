@@ -10,9 +10,9 @@ import UIKit
 import Kingfisher
 
 class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-
+    
     @IBOutlet weak var tableView: UITableView!
-
+    
     var hotList = [PromotedProducts]()
     
     override func viewDidLoad() {
@@ -47,7 +47,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         let imageURL = URL(string: hotList[indexPath.section].products[indexPath.row].mainImage)
         cell.topImageView.kf.setImage(with: imageURL)
-
+        
         return cell
     }
     
@@ -59,41 +59,41 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     // section 點擊事件
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-//        let name = info[indexPath.section][indexPath.row]
-//        print("row \(indexPath.section)， \(indexPath.row)")
-//        print("選擇的是第 \(indexPath.section) 個 section 的第 \(indexPath.row) 個 cell，\(name)")
+        //        let name = info[indexPath.section][indexPath.row]
+        //        print("row \(indexPath.section)， \(indexPath.row)")
+        //        print("選擇的是第 \(indexPath.section) 個 section 的第 \(indexPath.row) 個 cell，\(name)")
     }
     
     func getHots() {
         
         let hotsApi = StylishURL.MARKET_HOTS
-           if let url = URL(string: hotsApi) {
-               // GET
-               URLSession.shared.dataTask(with: url) { (data, response, error) in
-                   if let error = error {
+        if let url = URL(string: hotsApi) {
+            // GET
+            URLSession.shared.dataTask(with: url) { (data, response, error) in
+                if let error = error {
                     
-                       print("Error: \(error.localizedDescription)")
+                    print("Error: \(error.localizedDescription)")
                     
-                   } else if let response = response as? HTTPURLResponse,let data = data {
+                } else if let response = response as? HTTPURLResponse,let data = data {
                     
-                       print("Status code: \(response.statusCode)")
-                       let decoder = JSONDecoder()
-                       
-                       if let hotsData = try? decoder.decode(HotsData.self, from: data) {
-                           DispatchQueue.main.async{
-                          
+                    print("Status code: \(response.statusCode)")
+                    let decoder = JSONDecoder()
+                    
+                    if let hotsData = try? decoder.decode(HotsData.self, from: data) {
+                        DispatchQueue.main.async{
+                            
                             for hot in (hotsData.data){
                                 
                                 self.hotList.append(hot)
                             }
                             
-                               self.tableView.reloadData()
-                           }
-                       }
-                   }
-               }.resume()
-           } else {
-               print("Invalid URL.")
-           }
+                            self.tableView.reloadData()
+                        }
+                    }
+                }
+            }.resume()
+        } else {
+            print("Invalid URL.")
+        }
     }
 }
