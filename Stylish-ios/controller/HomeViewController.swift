@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
@@ -40,31 +41,13 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "hotsCell", for: indexPath) as! HotsCellTableViewCell
+        
         cell.title.text = hotList[indexPath.section].products[indexPath.row].title
         cell.subTitle.text = hotList[indexPath.section].products[indexPath.row].description
-
-        cell.title.numberOfLines = 0
         
         let imageURL = URL(string: hotList[indexPath.section].products[indexPath.row].mainImage)
-          var image: UIImage?
-          if let url = imageURL {
-              //All network operations has to run on different thread(not on main thread).
-              DispatchQueue.global(qos: .userInitiated).async {
-                  let imageData = NSData(contentsOf: url)
-                  //All UI operations has to run on main thread.
-                  DispatchQueue.main.async {
-                      if imageData != nil {
-                        
-                        image = UIImage(data: imageData! as Data)
-                        cell.topImageView?.image = image
+        cell.topImageView.kf.setImage(with: imageURL)
 
-                      } else {
-                          image = nil
-                      }
-                  }
-              }
-          }
-        
         return cell
     }
     
