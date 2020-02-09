@@ -281,28 +281,14 @@
             </objects>
             <point key="canvasLocation" x="3776.811594202899" y="1534.8214285714284"/>
         </scene>
-        <!--Main View Controller-->
+        <!--Profile View Controller-->
         <scene sceneID="IPB-Pr-pc1">
             <objects>
-                <viewController id="DZR-Ov-TMy" customClass="MainViewController" customModule="Stylish_ios" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="DZR-Ov-TMy" customClass="ProfileViewController" customModule="Stylish_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YRt-Wu-Re8">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rb1-TM-phd">
-                                <rect key="frame" x="120.5" y="412" width="173" height="72"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
-                                <state key="normal" title="Page4 a"/>
-                                <connections>
-                                    <segue destination="ODY-Vf-chW" kind="show" id="iBh-Dg-NsE"/>
-                                </connections>
-                            </button>
-                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="Rb1-TM-phd" firstAttribute="centerY" secondItem="YRt-Wu-Re8" secondAttribute="centerY" id="H6m-GO-m34"/>
-                            <constraint firstItem="Rb1-TM-phd" firstAttribute="centerX" secondItem="YRt-Wu-Re8" secondAttribute="centerX" id="dsb-5O-Pnd"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="nZj-hc-K8I"/>
                     </view>
                     <navigationItem key="navigationItem" id="bAb-cN-vbU"/>
