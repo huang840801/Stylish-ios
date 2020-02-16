@@ -12,65 +12,109 @@ class ProfileViewController: UIViewController, UICollectionViewDelegate, UIColle
     
     var fullScreenSize :CGSize!
     
+    var imageList = ["Icons_24px_AwaitingPayment.png",
+                     "Icons_24px_AwaitingShipment.png",
+                     "Icons_24px_Shipped.png",
+                     "Icons_24px_AwaitingReview.png",
+                     "Icons_24px_Exchange.png",
+                     "Icons_24px_Starred.png",
+                     "Icons_24px_Notification.png",
+                     "Icons_24px_Refunded.png",
+                     "Icons_24px_Address.png",
+                     "Icons_24px_CustomerService.png",
+                     "Icons_24px_SystemFeedback.png",
+                     "Icons_24px_RegisterCellphone.png",
+                     "Icons_24px_Settings.png"]
+    var titleList = ["待付款","待出貨","待簽收","待評價","退換貨","收藏","貨到通知","帳戶退款","地址","客服訊息","系統回饋","手機綁定","設定"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         fullScreenSize = UIScreen.main.bounds.size
         
         let layout = UICollectionViewFlowLayout()
-        
-        layout.sectionInset = UIEdgeInsets(top: 5,left: 5,bottom: 5,right: 5)
-        
-        layout.minimumLineSpacing = 5
-        
-        layout.itemSize = CGSize(width: CGFloat(fullScreenSize.width)/3 - 10.0,height: CGFloat(fullScreenSize.width)/3 - 10.0)
-        
-        layout.headerReferenceSize = CGSize(width: fullScreenSize.width, height: 40)
-        
-        layout.footerReferenceSize = CGSize(width: fullScreenSize.width, height: 40)
-        
-        let myCollectionView = UICollectionView(frame: CGRect(
+            
+        let collectionView = UICollectionView(frame: CGRect(
             x: 0, y: 20,
             width: fullScreenSize.width,
-            height: fullScreenSize.height - 20),
-                                                collectionViewLayout: layout)
+            height: fullScreenSize.height),
+            collectionViewLayout: layout)
         
-        myCollectionView.register(
+        collectionView.register(
             MyCollectionViewCell.self,
             forCellWithReuseIdentifier: "Cell")
         
-        myCollectionView.register(
+        collectionView.register(
             UICollectionReusableView.self,
             forSupplementaryViewOfKind:
             UICollectionView.elementKindSectionHeader,
             withReuseIdentifier: "Header")
         
-        myCollectionView.register(
-            UICollectionReusableView.self,
-            forSupplementaryViewOfKind:
-            UICollectionView.elementKindSectionFooter,
-            withReuseIdentifier: "Footer")
-        
+        //頁面背景顏色
+        collectionView.backgroundColor = UIColor.white
         // 設置委任對象
-        myCollectionView.delegate = self
-        myCollectionView.dataSource = self
-
-        // 加入畫面中
-        self.view.addSubview(myCollectionView)
+        collectionView.delegate = self
+        collectionView.dataSource = self
         
-        print("Huang ViewDidLoad")
-
+        // 加入畫面中
+        self.view.addSubview(collectionView)
+    }
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        2
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        if (section == 0){
+            
+            return 5
+        } else {
+            
+            return 8
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         
-        print("Huang numberOfItemsInSection")
-        return 50
+        let  reusableView =
+            collectionView.dequeueReusableSupplementaryView(
+                ofKind: UICollectionView.elementKindSectionHeader,
+                withReuseIdentifier: "Header",
+                for: indexPath)
+        
+        let title = UILabel(frame: CGRect(
+            x: 16, y: 16,
+            width: fullScreenSize.width, height: reusableView.bounds.size.height))
+        
+        title.font = title.font.withSize(20)
+        title.textAlignment = .left
+                
+        if (indexPath.section == 0){
+            
+            title.text = "我的訂單"
+            
+            let detail = UILabel(frame: CGRect(
+                x: -16, y: 16,
+                width: fullScreenSize.width, height: reusableView.bounds.size.height))
+            detail.textAlignment = .right
+            detail.text = "查看全部";
+            detail.textColor = UIColor.black
+            
+            reusableView.addSubview(detail)
+        } else{
+            
+            title.text = "更多服務"
+        }
+        title.textColor = UIColor.black
+        
+        reusableView.addSubview(title)
+        
+        return reusableView
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-         print("你選擇了第 \(indexPath.section + 1) 組的")
+        print("你選擇了第 \(indexPath.section + 1) 組的 \(indexPath.row )")
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -79,10 +123,74 @@ class ProfileViewController: UIViewController, UICollectionViewDelegate, UIColle
             collectionView.dequeueReusableCell(
                 withReuseIdentifier: "Cell", for: indexPath)  as! MyCollectionViewCell
         
-        cell.titleLabel.text = "0\(indexPath.item + 1)"
-        
-        print("Huang cell")
+        if (indexPath.section == 0){
 
+            cell.titleLabel.text = titleList[indexPath.item]
+            
+            cell.imageView.image = UIImage(named: imageList[indexPath.item])
+             
+        } else{
+
+            cell.titleLabel.text = titleList[indexPath.item + 5]
+            
+            cell.imageView.image = UIImage(named: imageList[indexPath.item + 5])
+        }
+        
+        cell.backgroundColor = UIColor.white
+        
         return cell
+    }
+}
+
+extension ProfileViewController: UICollectionViewDelegateFlowLayout{
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        if indexPath.section == 0 {
+
+            return CGSize(width: UIScreen.main.bounds.size.width / 5.0, height: 80.0)
+
+        } else if indexPath.section == 1 {
+
+            return CGSize(width: UIScreen.main.bounds.size.width / 4.0, height: 80.0)
+        }
+
+        return CGSize.zero
+    }
+    
+//    func collectionView(
+//        _ collectionView: UICollectionView,
+//        layout collectionViewLayout: UICollectionViewLayout,
+//        insetForSectionAt section: Int
+//    ) -> UIEdgeInsets {
+//
+//        return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+//    }
+
+    func collectionView(
+        _ collectionView: UICollectionView,
+        layout collectionViewLayout: UICollectionViewLayout,
+        minimumLineSpacingForSectionAt section: Int
+    ) -> CGFloat {
+
+        return 24.0
+    }
+
+    func collectionView(
+        _ collectionView: UICollectionView,
+        layout collectionViewLayout: UICollectionViewLayout,
+        minimumInteritemSpacingForSectionAt section: Int
+    ) -> CGFloat {
+
+        return 0
+    }
+
+    func collectionView(
+        _ collectionView: UICollectionView,
+        layout collectionViewLayout: UICollectionViewLayout,
+        referenceSizeForHeaderInSection section: Int
+    ) -> CGSize {
+
+        return CGSize(width: UIScreen.main.bounds.size.width, height: 48.0)
     }
 }

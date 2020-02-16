@@ -11,21 +11,29 @@ import UIKit
 class MyCollectionViewCell: UICollectionViewCell {
     
     var titleLabel:UILabel!
+    var imageView:UIImageView!
     
     override init(frame: CGRect) {
         
         super.init(frame: frame)
         
-        // 取得螢幕寬度
-        let w = Double(
-            UIScreen.main.bounds.size.width)
+        imageView = UIImageView(frame: CGRect(
+            x: 0, y: 0,
+            width: 30, height: 30))
         
+        imageView.center = CGPoint(x: self.bounds.size.width / 2,
+                                   y: self.bounds.size.height / 2)
+        self.addSubview(imageView)
+            
         // 建立一個 UILabel
         titleLabel = UILabel(frame:CGRect(
-            x: 0, y: 0, width: w/3 - 10.0, height: 40))
+            x: 0, y: 50, width: self.bounds.size.width, height: 50))
         titleLabel.textAlignment = .center
-        titleLabel.textColor = UIColor.orange
-        self.addSubview(titleLabel)
+        titleLabel.contentMode = .bottom
+        titleLabel.textColor = UIColor.black
+        titleLabel.font = titleLabel.font.withSize(15)
+
+        self.addSubview(titleLabel)        
     }
     
     required init?(coder aDecoder: NSCoder) {

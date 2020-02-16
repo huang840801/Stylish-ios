@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5925056E23EFA99000D97026 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5925056C23EFA99000D97026 /* ProfileViewController.swift */; };
-		5925057323F0504600D97026 /* MyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5925057223F0504600D97026 /* MyCollectionViewCell.swift */; };
+		5925057323F0504600D97026 /* ProfileCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5925057223F0504600D97026 /* ProfileCollectionViewCell.swift */; };
 		595CA148235046DB00A6070C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595CA147235046DB00A6070C /* AppDelegate.swift */; };
 		595CA14A235046DB00A6070C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595CA149235046DB00A6070C /* SceneDelegate.swift */; };
 		595CA14F235046DB00A6070C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 595CA14D235046DB00A6070C /* Main.storyboard */; };
@@ -193,7 +193,7 @@
 		1C70FCC5D6DA1EB3024512D0 /* Pods-Stylish-iosTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stylish-iosTests.release.xcconfig"; path = "Target Support Files/Pods-Stylish-iosTests/Pods-Stylish-iosTests.release.xcconfig"; sourceTree = "<group>"; };
 		4F0296EE6D2521D958CA6F18 /* Pods_Stylish_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Stylish_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5925056C23EFA99000D97026 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		5925057223F0504600D97026 /* MyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollectionViewCell.swift; sourceTree = "<group>"; };
+		5925057223F0504600D97026 /* ProfileCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCollectionViewCell.swift; sourceTree = "<group>"; };
 		595CA144235046DB00A6070C /* Stylish-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Stylish-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		595CA147235046DB00A6070C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		595CA149235046DB00A6070C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -467,7 +467,7 @@
 			children = (
 				5992CFF82373027800BF14CA /* HotsCellTableViewCell.swift */,
 				5992CFF92373027800BF14CA /* HotsCellTableViewCell.xib */,
-				5925057223F0504600D97026 /* MyCollectionViewCell.swift */,
+				5925057223F0504600D97026 /* ProfileCollectionViewCell.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -1060,7 +1060,7 @@
 			files = (
 				597FB2C5236E66A300A87E32 /* StylishURL.swift in Sources */,
 				595CA148235046DB00A6070C /* AppDelegate.swift in Sources */,
-				5925057323F0504600D97026 /* MyCollectionViewCell.swift in Sources */,
+				5925057323F0504600D97026 /* ProfileCollectionViewCell.swift in Sources */,
 				595CA14A235046DB00A6070C /* SceneDelegate.swift in Sources */,
 				597FB2C9236E7E1000A87E32 /* Hots.swift in Sources */,
 				599C425A235189A40070531B /* MainViewController.swift in Sources */,
